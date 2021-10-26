@@ -44,4 +44,9 @@ public class QueryContactDao implements QueryContactDataHandler {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public Integer countAllActive() {
+        return repository.countAllByStatus(Status.ACTIVE);
+    }
+
 }

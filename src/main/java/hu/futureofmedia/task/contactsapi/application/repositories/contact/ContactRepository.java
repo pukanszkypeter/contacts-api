@@ -11,4 +11,6 @@ public interface ContactRepository extends PagingAndSortingRepository<Contact, L
 
     List<Contact> findAllByStatus(Status status, Pageable pageable);
 
+    Integer countAllByStatus(Status status);
+
 }

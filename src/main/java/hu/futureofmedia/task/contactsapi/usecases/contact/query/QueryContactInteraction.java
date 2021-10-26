@@ -16,4 +16,9 @@ public class QueryContactInteraction implements QueryContactUseCase {
         return dataHandler.findAllActive(page);
     }
 
+    @Override
+    public Integer countAllActive() {
+        return dataHandler.countAllActive();
+    }
+
 }

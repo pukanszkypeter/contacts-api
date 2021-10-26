@@ -5,10 +5,7 @@ import hu.futureofmedia.task.contactsapi.models.dto.ContactDto;
 import hu.futureofmedia.task.contactsapi.models.others.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +21,11 @@ public class QueryContactController {
     @PostMapping("/active")
     public ResponseEntity<List<ContactDto>> findAllActive(@RequestBody Page page) {
         return ResponseEntity.ok(service.findAllActive(page));
+    }
+
+    @GetMapping("/count/active")
+    public ResponseEntity<Integer> countAllActive() {
+        return ResponseEntity.ok(service.countAllActive());
     }
 
 }

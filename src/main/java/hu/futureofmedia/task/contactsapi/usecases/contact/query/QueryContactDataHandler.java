@@ -9,4 +9,6 @@ public interface QueryContactDataHandler {
 
     List<ContactDto> findAllActive(Page page);
 
+    Integer countAllActive();
+
 }

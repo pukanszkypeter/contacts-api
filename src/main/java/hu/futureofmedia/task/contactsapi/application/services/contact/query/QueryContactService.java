@@ -23,4 +23,6 @@ public class QueryContactService {
         return useCase.findAllActive(page);
     }
 
+    public Integer countAllActive() { return useCase.countAllActive(); }
+
 }
