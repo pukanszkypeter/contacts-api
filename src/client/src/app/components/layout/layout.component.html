@@ -1,0 +1,39 @@
+<div class="sidebar">
+  <div class="top-menu">
+    <ul>
+      <li>
+        <button mat-button [routerLink]="['/home']">
+          <mat-icon svgIcon="home"></mat-icon>
+          <span>Kezdőlap</span>
+        </button>
+      </li>
+      <li>
+        <button mat-button [routerLink]="['/contacts']">
+          <mat-icon svgIcon="contact-page"></mat-icon>
+          <span>Kapcsolatok</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="bottom-menu">
+    <ul>
+      <li>
+        <a target="_blank" href="https://github.com/pukanszkypeter/contacts-api">
+          <button mat-button>
+            <mat-icon svgIcon="github"></mat-icon>
+            <span>GitHub</span>
+          </button>
+        </a>
+      </li>
+      <li>
+        <button mat-button>
+          <mat-icon svgIcon="settings"></mat-icon>
+          <span>Beállítások</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>
