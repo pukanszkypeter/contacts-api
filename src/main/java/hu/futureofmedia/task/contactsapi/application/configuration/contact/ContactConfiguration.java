@@ -14,6 +14,7 @@ import hu.futureofmedia.task.contactsapi.models.entities.Contact;
 import hu.futureofmedia.task.contactsapi.usecases.contact.manipulation.ManipulationContactDataHandler;
 import hu.futureofmedia.task.contactsapi.usecases.contact.query.QueryContactDataHandler;
 import hu.futureofmedia.task.contactsapi.utils.sourcedata.SourceDataManagement;
+import hu.futureofmedia.task.contactsapi.utils.sourcedata.SourceDataManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,7 +22,7 @@ import org.springframework.context.annotation.Configuration;
 public class ContactConfiguration {
 
     @Bean
-    public SourceDataManagement<Contact> contactSourceDataManagement() {
+    public SourceDataManager<Contact> contactSourceDataManager() {
         return new SourceDataManagement<>();
     }
 
@@ -41,8 +42,8 @@ public class ContactConfiguration {
     }
 
     @Bean
-    public ManipulationContactDataHandler manipulationContactDataHandler(ContactRepository contactRepository, SourceDataManagement<Contact> sourceDataManagement, ContactValidator contactValidator) {
-        return new ManipulationContactDao(contactRepository, sourceDataManagement, contactValidator);
+    public ManipulationContactDataHandler manipulationContactDataHandler(ContactRepository contactRepository, SourceDataManager<Contact> sourceDataManager, ContactValidator contactValidator) {
+        return new ManipulationContactDao(contactRepository, sourceDataManager, contactValidator);
     }
 
     @Bean
