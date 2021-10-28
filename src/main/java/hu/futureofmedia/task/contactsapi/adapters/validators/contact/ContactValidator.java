@@ -35,8 +35,6 @@ public class ContactValidator implements SourceDataValidatorManager<Contact> {
             throw new ValidationException("Required field (first name) is missing for data!");
         } else if ( contact.getEMail() == null || contact.getEMail().isEmpty()) {
             throw new ValidationException("Required field (e-mail) is missing for data!");
-        } else if (contact.getPhoneNumber() == null || contact.getPhoneNumber().isEmpty()) {
-            throw new ValidationException("Required field (phone number) is missing for data!");
         } else if (contact.getCompanyId() == 0) {
             throw new ValidationException("Required field (company id) is missing for data!");
         } else if (contact.getStatus() == null) {
@@ -75,7 +73,7 @@ public class ContactValidator implements SourceDataValidatorManager<Contact> {
     /// PHONE NUMBER
     private void validatePhoneNumber(String phoneNumber) throws ValidationException {
         String regex = "^[+]36\\s\\d{2}\\s\\d{3}\\s\\d{4}$";
-        if (!phoneNumber.matches(regex)) {
+        if (phoneNumber.length() > 0 && !phoneNumber.matches(regex)) {
             throw new ValidationException("The phone number is not correct!");
         }
     }
