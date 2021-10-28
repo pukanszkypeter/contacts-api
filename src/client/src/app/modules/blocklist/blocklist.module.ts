@@ -9,4 +9,4 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class BlocklistModule { }
+export class BlockListModule { }

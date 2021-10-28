@@ -7,6 +7,7 @@ import {MatPaginator, PageEvent} from "@angular/material/paginator";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatDialog} from "@angular/material/dialog";
 import {ContactsDialogComponent} from "../contacts-dialog/contacts-dialog.component";
+import {LanguageService} from "../../../../services/client-side/language.service";
 
 @Component({
   selector: 'app-contacts-page',
@@ -26,6 +27,7 @@ export class ContactsPageComponent implements OnInit  {
 
   constructor(private contactsDataService: ContactsDataService,
               private _snackBar: MatSnackBar,
+              private languageService: LanguageService,
               public dialog: MatDialog) {
   }
 
@@ -45,7 +47,7 @@ export class ContactsPageComponent implements OnInit  {
 
     }).catch(error => {
       console.log(error);
-      this.openSnackBar('Hiba az adatok betöltése során!', 'error-snackbar');
+      this.openSnackBar(this.languageService.getTranslatedText('DOWNLOAD_DATA_ERROR'), 'error-snackbar');
 
     }).finally(() => this.loading = false);
   }
@@ -57,7 +59,7 @@ export class ContactsPageComponent implements OnInit  {
 
     }).catch(error => {
       console.log(error);
-      this.openSnackBar('Hiba az adatok betöltése során!', 'error-snackbar');
+      this.openSnackBar(this.languageService.getTranslatedText('DOWNLOAD_DATA_ERROR'), 'error-snackbar');
 
     }).finally(() => this.loading = false);
   }
@@ -112,11 +114,12 @@ export class ContactsPageComponent implements OnInit  {
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      this.openSnackBar('Sikeres mentés!', 'success-snackbar');
-      this.page.index = 0;
-      this.refreshTable();
+      if (res) {
+        this.page.index = 0;
+        this.refreshTable();
+      }
     }, err => {
-      this.openSnackBar('Sikertelen mentés!', 'error-snackbar');
+      this.openSnackBar(this.languageService.getTranslatedText('FORM_ERROR'), 'error-snackbar');
     });
   }
 

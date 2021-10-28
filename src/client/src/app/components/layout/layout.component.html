@@ -4,13 +4,13 @@
       <li>
         <button mat-button [routerLink]="['/home']">
           <mat-icon svgIcon="home"></mat-icon>
-          <span>Kezdőlap</span>
+          <span>{{ 'layoutComponent_home' | translate }}</span>
         </button>
       </li>
       <li>
         <button mat-button [routerLink]="['/contacts']">
           <mat-icon svgIcon="contact-page"></mat-icon>
-          <span>Kapcsolatok</span>
+          <span>{{ 'layoutComponent_contacts' | translate }}</span>
         </button>
       </li>
     </ul>
@@ -21,14 +21,14 @@
         <a target="_blank" href="https://github.com/pukanszkypeter/contacts-api">
           <button mat-button>
             <mat-icon svgIcon="github"></mat-icon>
-            <span>GitHub</span>
+            <span>{{ 'layoutComponent_github' | translate }}</span>
           </button>
         </a>
       </li>
       <li>
-        <button mat-button>
+        <button mat-button (click)="openSettingsDialog()">
           <mat-icon svgIcon="settings"></mat-icon>
-          <span>Beállítások</span>
+          <span>{{ 'layoutComponent_settings' | translate }}</span>
         </button>
       </li>
     </ul>
