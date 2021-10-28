@@ -1,0 +1,54 @@
+{
+  "HUNGARIAN": "Magyar",
+  "GERMAN": "Német",
+  "ENGLISH": "Angol",
+
+  "SAVE": "Mentés",
+  "CLOSE": "Bezárás",
+
+  "SUCCESSFUL_SAVE": "Sikeres mentés!",
+  "UNSUCCESSFUL_SAVE": "Sikertelen mentés!",
+
+  "DOWNLOAD_DATA_ERROR": "Hiba az adatok betöltése során!",
+  "FORM_ERROR": "Űrlap hiba!",
+
+  "dashboardComponent_title": "Üdv a kapcsolattartókat kezelő alkalmazásban.",
+
+  "layoutComponent_home": "Kezdőoldal",
+  "layoutComponent_contacts": "Kapcsolatok",
+  "layoutComponent_github": "GitHub",
+  "layoutComponent_settings": "Beállítások",
+
+  "pageNotFoundComponent_title": "404 - Az oldal nem található.",
+
+  "settingsDialogComponent_title": "Alkalmazás beállítások",
+  "settingsDialogComponent_version": "Verzió",
+  "settingsDialogComponent_language": "Nyelv",
+
+  "contactsDialogComponent_title": "Kapcsolat felvétele",
+  "contactsDialogComponent_lastName": "Vezetéknév",
+  "contactsDialogComponent_lastNameRequired": "A vezetéknév megadása kötelező!",
+  "contactsDialogComponent_lastNameMaxLength": "A vezetéknév max. 100 karakter lehet!",
+  "contactsDialogComponent_firstName": "Keresztnév",
+  "contactsDialogComponent_firstNameRequired": "A keresztnév megadása kötelező!",
+  "contactsDialogComponent_firstNameMaxLength": "A keresztnév max. 100 karakter lehet!",
+  "contactsDialogComponent_company": "Cég",
+  "contactsDialogComponent_companyRequired": "A cég megadása kötelező!",
+  "contactsDialogComponent_email": "E-mail cím",
+  "contactsDialogComponent_emailRequired": "Az e-mail cím megadása kötelező!",
+  "contactsDialogComponent_emailPattern": "Nem valid e-mail cím!",
+  "contactsDialogComponent_emailBlockedDomain": "Ez a domain nem megengedett!",
+  "contactsDialogComponent_emailExample": "Példa: exe@exe.com",
+  "contactsDialogComponent_phoneNumber": "Telefonszám",
+  "contactsDialogComponent_phoneNumberPattern": "Nem valid telefonszám!",
+  "contactsDialogComponent_phoneNumberExample": "Példa: +36 12 34 567",
+  "contactsDialogComponent_comment": "Megjegyzés",
+
+  "contactsPageComponent_title": "Kapcsolatok",
+  "contactsPageComponent_newContact": "Új kapcsolat",
+  "contactsPageComponent_name": "Név",
+  "contactsPageComponent_company": "Cég",
+  "contactsPageComponent_email": "E-mail",
+  "contactsPageComponent_phoneNumber": "Telefonszám",
+  "contactsPageComponent_missingValue": "Hiányzó adat"
+}

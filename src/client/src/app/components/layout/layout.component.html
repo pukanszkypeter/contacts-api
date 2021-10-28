@@ -1,0 +1,39 @@
+<div class="sidebar">
+  <div class="top-menu">
+    <ul>
+      <li>
+        <button mat-button [routerLink]="['/home']">
+          <mat-icon svgIcon="home"></mat-icon>
+          <span>{{ 'layoutComponent_home' | translate }}</span>
+        </button>
+      </li>
+      <li>
+        <button mat-button [routerLink]="['/contacts']">
+          <mat-icon svgIcon="contact-page"></mat-icon>
+          <span>{{ 'layoutComponent_contacts' | translate }}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="bottom-menu">
+    <ul>
+      <li>
+        <a target="_blank" href="https://github.com/pukanszkypeter/contacts-api">
+          <button mat-button>
+            <mat-icon svgIcon="github"></mat-icon>
+            <span>{{ 'layoutComponent_github' | translate }}</span>
+          </button>
+        </a>
+      </li>
+      <li>
+        <button mat-button (click)="openSettingsDialog()">
+          <mat-icon svgIcon="settings"></mat-icon>
+          <span>{{ 'layoutComponent_settings' | translate }}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>

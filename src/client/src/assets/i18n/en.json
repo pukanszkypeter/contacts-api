@@ -1,0 +1,54 @@
+{
+  "HUNGARIAN": "Hungarian",
+  "GERMAN": "German",
+  "ENGLISH": "English",
+
+  "SAVE": "Save",
+  "CLOSE": "Close",
+
+  "SUCCESSFUL_SAVE": "Successful saving!",
+  "UNSUCCESSFUL_SAVE": "Failed to save!",
+
+  "DOWNLOAD_DATA_ERROR": "Error loading data!",
+  "FORM_ERROR": "Form error!",
+
+  "dashboardComponent_title": "Welcome to the Contacts application.",
+
+  "layoutComponent_home": "Home",
+  "layoutComponent_contacts": "Contacts",
+  "layoutComponent_github": "GitHub",
+  "layoutComponent_settings": "Settings",
+
+  "pageNotFoundComponent_title": "404 - Page not found.",
+
+  "settingsDialogComponent_title": "Application settings",
+  "settingsDialogComponent_version": "Version",
+  "settingsDialogComponent_language": "Language",
+
+  "contactsDialogComponent_title": "Add contact",
+  "contactsDialogComponent_lastName": "Last name",
+  "contactsDialogComponent_lastNameRequired": "Last name is required!",
+  "contactsDialogComponent_lastNameMaxLength": "The last name can be max. 100 characters!",
+  "contactsDialogComponent_firstName": "First name",
+  "contactsDialogComponent_firstNameRequired": "First name is required!",
+  "contactsDialogComponent_firstNameMaxLength": "The first name can be max. 100 characters!",
+  "contactsDialogComponent_company": "Company",
+  "contactsDialogComponent_companyRequired": "Company is required!",
+  "contactsDialogComponent_email": "E-mail address",
+  "contactsDialogComponent_emailRequired": "E-mail is required!",
+  "contactsDialogComponent_emailPattern": "Invalid e-mail address!",
+  "contactsDialogComponent_emailBlockedDomain": "This domain is not allowed!",
+  "contactsDialogComponent_emailExample": "Example: exe@exe.com",
+  "contactsDialogComponent_phoneNumber": "Phone number",
+  "contactsDialogComponent_phoneNumberPattern": "Invalid phone number!",
+  "contactsDialogComponent_phoneNumberExample": "Example: +36 12 34 567",
+  "contactsDialogComponent_comment": "Comment",
+
+  "contactsPageComponent_title": "Contacts",
+  "contactsPageComponent_newContact": "New contact",
+  "contactsPageComponent_name": "Name",
+  "contactsPageComponent_company": "Company",
+  "contactsPageComponent_email": "E-mail",
+  "contactsPageComponent_phoneNumber": "Phone number",
+  "contactsPageComponent_missingValue": "Missing value"
+}

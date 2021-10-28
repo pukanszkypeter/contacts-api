@@ -1,0 +1,69 @@
+<h1 mat-dialog-title>
+  {{ 'contactsDialogComponent_title' | translate }}
+</h1>
+<mat-dialog-content>
+  <form [formGroup]="contactsForm">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{'contactsDialogComponent_lastName' | translate}}</mat-label>
+        <input matInput type="text" [formControl]="lastName">
+        <mat-error>
+          <span *ngIf="lastName.hasError('required')">{{ 'contactsDialogComponent_lastNameRequired' | translate }}</span>
+          <span *ngIf="lastName.hasError('maxlength')">{{ 'contactsDialogComponent_lastNameMaxLength' | translate }}</span>
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'contactsDialogComponent_firstName' | translate }}</mat-label>
+        <input matInput type="text" [formControl]="firstName">
+        <mat-error>
+          <span *ngIf="firstName.hasError('required')">{{ 'contactsDialogComponent_firstNameRequired' | translate }}</span>
+          <span *ngIf="firstName.hasError('maxlength')">{{ 'contactsDialogComponent_firstNameMaxLength' | translate }}</span>
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'contactsDialogComponent_company' | translate }}</mat-label>
+        <mat-select [formControl]="company">
+          <mat-option *ngFor="let company of companyList" value="{{ company.id }}">{{ company.name }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="company.hasError('required')">{{ 'contactsDialogComponent_companyRequired' | translate }}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{'contactsDialogComponent_email' | translate}}</mat-label>
+        <input matInput type="text" [formControl]="email">
+        <mat-error>
+          <span *ngIf="email.hasError('required')">{{ 'contactsDialogComponent_emailRequired' | translate }}</span>
+          <span *ngIf="email.hasError('pattern')">{{ 'contactsDialogComponent_emailPattern' | translate }}</span>
+          <span *ngIf="email.hasError('blockedDomain')">{{ 'contactsDialogComponent_emailBlockedDomain' | translate }}</span>
+        </mat-error>
+        <mat-hint>{{ 'contactsDialogComponent_emailExample' | translate }}</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{'contactsDialogComponent_phoneNumber' | translate}}</mat-label>
+        <input matInput type="text" [formControl]="phoneNumber" maxlength="15">
+        <mat-error>
+          <span *ngIf="phoneNumber.hasError('pattern')">{{'contactsDialogComponent_phoneNumberPattern' | translate}}</span>
+        </mat-error>
+        <mat-hint align="start">{{'contactsDialogComponent_phoneNumberExample' | translate}}</mat-hint>
+        <mat-hint align="end">{{phoneNumber.value.length}} / 15</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>{{'contactsDialogComponent_comment' | translate}}</mat-label>
+        <textarea matInput [formControl]="comment"></textarea>
+      </mat-form-field>
+    </p>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-stroked-button color="primary" [disabled]="!contactsForm.valid" (click)="save()">{{'SAVE' | translate}}</button>
+  <button mat-stroked-button mat-dialog-close>{{ 'CLOSE' | translate }}</button>
+</mat-dialog-actions>

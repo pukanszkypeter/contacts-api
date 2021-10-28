@@ -1,0 +1,54 @@
+{
+  "HUNGARIAN": "Ungarisch",
+  "GERMAN": "Deutsch",
+  "ENGLISH": "Englisch",
+
+  "SAVE": "Speichern",
+  "CLOSE": "Schließen",
+
+  "SUCCESSFUL_SAVE": "Erfolgreiches speichern!",
+  "UNSUCCESSFUL_SAVE": "Konnte nicht gespeichert werden!",
+
+  "DOWNLOAD_DATA_ERROR": "Fehler  beim Laden von Daten!",
+  "FORM_ERROR": "Form fehler!",
+
+  "dashboardComponent_title": "Willkommen bei der Kontakte Applikation.",
+
+  "layoutComponent_home": "Startseite",
+  "layoutComponent_contacts": "Kontakte",
+  "layoutComponent_github": "GitHub",
+  "layoutComponent_settings": "Einstellungen",
+
+  "pageNotFoundComponent_title": "404 - Seite nicht gefunden.",
+
+  "settingsDialogComponent_title": "Applikation einstellungen",
+  "settingsDialogComponent_version": "Version",
+  "settingsDialogComponent_language": "Sprache",
+
+  "contactsDialogComponent_title": "Kontakt hinzufügen",
+  "contactsDialogComponent_lastName": "Nachname",
+  "contactsDialogComponent_lastNameRequired": "Nachname ist erforderlich!",
+  "contactsDialogComponent_lastNameMaxLength": "Nachname darf max. 100 Zeichen!",
+  "contactsDialogComponent_firstName": "Vorname",
+  "contactsDialogComponent_firstNameRequired": "Vorname ist erforderlich!",
+  "contactsDialogComponent_firstNameMaxLength": "Vorname darf max. 100 Zeichen!",
+  "contactsDialogComponent_company": "Firma",
+  "contactsDialogComponent_companyRequired": "Firma ist erforderlich!",
+  "contactsDialogComponent_email": "E-mail Addresse",
+  "contactsDialogComponent_emailRequired": "E-mail Addresse ist erforderlich!",
+  "contactsDialogComponent_emailPattern": "Ungültige E-mail Addresse!",
+  "contactsDialogComponent_emailBlockedDomain": "Diese Domain ist nicht erlaubt!",
+  "contactsDialogComponent_emailExample": "Beispiel: exe@exe.com",
+  "contactsDialogComponent_phoneNumber": "Telefonnummer",
+  "contactsDialogComponent_phoneNumberPattern": "Ungültige Telefonnummer!",
+  "contactsDialogComponent_phoneNumberExample": "Beispiel: +36 12 34 567",
+  "contactsDialogComponent_comment": "Anmerkung",
+
+  "contactsPageComponent_title": "Kontakte",
+  "contactsPageComponent_newContact": "Neuer Kontakt",
+  "contactsPageComponent_name": "Name",
+  "contactsPageComponent_company": "Firma",
+  "contactsPageComponent_email": "E-mail",
+  "contactsPageComponent_phoneNumber": "Telefonnummber",
+  "contactsPageComponent_missingValue": "Fehlende Daten"
+}
